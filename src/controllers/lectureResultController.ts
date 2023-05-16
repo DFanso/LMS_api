@@ -26,19 +26,19 @@ export const addResult = async (req: Request, res: Response) => {
 
 // Fetch a Result by ID
 export const fetchResult = async (req: Request, res: Response) => {
-  const id = req.body.resultID;
-  console.log(id);
-  try {
-    const result = await Result.findById(id);
+  const studentId = req.body.userId;
 
-    if (!result) {
-      return res.status(404).json({ message: "Result not found" });
+  try {
+    const results = await Result.find({ studentId });
+
+    if (!results) {
+      return res
+        .status(404)
+        .json({ error: "No results found for this student" });
     }
 
-    res.status(200).json(result);
+    res.status(200).json({ message: "Results fetched successfully", results });
   } catch (error) {
-    res
-      .status(500)
-      .json({ error: "An error occurred while fetching the result" });
+    res.status(500).json({ error: "An error occurred while fetching results" });
   }
 };
