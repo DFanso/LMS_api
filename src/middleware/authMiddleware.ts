@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import jwt, { JwtPayload } from 'jsonwebtoken';
 
 interface RequestWithUser extends Request {
   user?: any;
@@ -11,20 +11,23 @@ export const authMiddleware = (req: RequestWithUser, res: Response, next: NextFu
   const token = authHeader && authHeader.split(' ')[1];
 
   if (!token) {
-    const error = new Error('No token provided') as any;
+    const error: any = new Error('No token provided');
     error.status = 401;
     return next(error);
   }
 
   // Verify the token
-  jwt.verify(token, process.env.SECRET_KEY as string, (err, user) => {
-    if (err) {
-      const error = new Error('Invalid token') as any;
+  jwt.verify(token, process.env.SECRET_KEY as string, (err, decoded) => {
+    if (err || typeof decoded === 'string') {
+      const error: any = new Error('Invalid token');
       error.status = 403;
       return next(error);
     }
 
-    req.user = user;
+    const userId = (decoded as JwtPayload).id;
+
+    req.body.userId = { id: userId };
+    console.log(req.body.userId.id)
     next();
   });
 };
