@@ -1,6 +1,6 @@
 import express from "express";
 import * as studentController from "../controllers/studentController";
-import { fetchResult } from "../controllers/lectureResultController";
+import { fetchResult } from "../controllers/ResultController";
 import { authMiddleware } from "../middleware/authMiddleware";
 
 const router = express.Router();
