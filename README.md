@@ -23,25 +23,26 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone [https://link-to-project](https://github.com/DFanso/LMS_api)
+git clone [https://link-to-project](https://github.com/DFanso/LMS_api)
 ```
 Go to the project directory
 
 ```bash
-    cd LMS_api 
+cd LMS_api 
 ```
 Install dependencies
 
 ```bash
-    npm i
+npm i
 ```
 Start the server
 
 ```bash
-  nodemon
+nodemon
 ```
 ## API Reference
 
-https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md
+[API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)
+
 
 
