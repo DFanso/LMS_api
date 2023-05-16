@@ -1,11 +1,11 @@
-### LMS API Documentation
+#### LMS API Documentation
 This API documentation provides the details of the Learning Management System (LMS) API. The base URL for all the endpoints is `http://localhost:3000/api`.
 
-## Student
+### Student
 
 ## Register
 Endpoint: `/student/register`   
-Method: POST  
+Method: `POST`  
 Body:  
 ```json
 {
@@ -26,7 +26,7 @@ Body:
   
 ## Login  
 Endpoint: `/student/login` 
-Method: POST  
+Method: `POST`  
 Body:  
 ```json
 {
@@ -39,10 +39,11 @@ Endpoint: `/student/fetchResult`
 Method: GET  
 Headers: Authorization: Bearer <token>  
     
-## Lecturer
-Register  
+### Lecturer
+    
+## Register  
 Endpoint: `/lecturer/register`  
-Method:`POST`  
+Method: `POST`  
 Body:  
 ```json
     {
@@ -60,4 +61,34 @@ Body:
 }
 
 ```
+    
+## Login
+Endpoint: `/lecturer/login`  
+Method: `POST`  
+Body:  
+```json
+    {
+    "username": "johndoe",
+    "password": "password"
+}
+```
+
+## Add Result
+Endpoint: `/lecturer/AddResult`
+Method: `POST`  
+Headers: Authorization: Bearer <token>  
+Body:
+    ```json
+    {
+    "studentId": "64635195a764bd468d9a2d12",
+    "BatchID": "test",
+    "FacultyId": "test",
+    "DegreeID": "test",
+    "Type": "presentation",
+    "Marks": "100"
+}
+ ```
+    
+ ### Lecture Schedules   
+    
 
