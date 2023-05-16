@@ -39,7 +39,7 @@ Endpoint: `/student/fetchResult`
 Method: GET  
 Headers: Authorization: Bearer <token>  
     
-### Lecturer
+## Lecturer
     
 ## Register  
 Endpoint: `/lecturer/register`  
@@ -89,6 +89,119 @@ Body:
 }
  ```
     
- ### Lecture Schedules   
+ ## Lecture Schedules
     
+## Create
+Endpoint: `/lecture-schedules`  
+Method: `POST`  
+Body:
+    ```json
+ {
+  "facultyName": "Faculty of Science",
+  "degreeBatchName": "20.1",
+  "date": "2023-06-01",
+  "startTime": "09:00 AM",
+  "endTime": "10:30 AM",
+  "lectureHall": "Hall A",
+  "lecturerName": "John Doe",
+  "lectureModules": "Module 13",
+  "degreeName": "Bachelor of Science"
+}
+ ```
+    
+## Get
+Endpoint: `/lecture-schedules`
+Method: `GET`
+    
+    
+## Get by User
+Endpoint: `/lecture-schedules/filter`
+Method: `GE`T
+Headers: Authorization: Bearer <token>  Get by User
 
+    
+## Faculty
+Create
+Endpoint: `/faculties`
+Method: `POST`
+Body:    
+```json
+{
+  "name": "Faculty of Science"
+}
+```
+## Get
+Endpoint: `/faculties`
+Method: `GET`   
+    
+## Degree Batch
+    
+## Create
+Endpoint: `/degree-batches`  
+Method: `POST`
+Body:  
+```json
+{
+  "name": "20.1"
+}
+ ```
+## Get
+Endpoint: `/degree-batches`  
+Method: `GET`
+    
+## Degree
+      
+## Create
+Endpoint: `/degrees`  
+Method: `POST`  
+Body:  
+    ```json
+{
+  "name": "BSc in Computer Science"
+}
+ ```
+   
+## Get
+Endpoint: `/degrees`  
+Method: `GET`  
+    
+## Lecture Modules
+    
+## Create
+Endpoint: `/lecture-modules`  
+Method: `POST`  
+Body:   
+    ```json
+{
+  "name": "Module 13"
+}
+
+    ```
+## Get
+Endpoint: `/lecture-modules`
+Method: `GET`
+    
+    
+## Assignment
+    
+##Create
+Endpoint: `/assignment`  
+Method: `POST`  
+Body:  
+    ```json
+{
+  "title": "Assignment 1",
+  "batch": "20.1",
+  "degree": "Bachelor of Science",
+  "moduleName": "Module 1",
+  "category": "assignment",
+  "file": "<file_path>"
+}
+ ```
+    
+## Get
+Endpoint: `/assignment/student`  
+Method: `GET`  
+Headers: Authorization: Bearer <token>  
+    
+## Please replace <token> with the actual token received after successful login and <file_path> with the actual file path for the assignment file.
