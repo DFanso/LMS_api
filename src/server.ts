@@ -10,6 +10,7 @@ import degreeBatchRoutes from './routes/degreeBatchRoutes';
 import lectureScheduleRoutes from './routes/lectureScheduleRoutes';
 import lectureModuleRoutes from './routes/lectureModuleRoutes';
 import degreeRoutes from './routes/degreeRoutes'
+import assignmentRoutes from "./routes/assignment";
 
 
 import { errorMiddleware } from './middleware/errorMiddleware';
@@ -32,6 +33,8 @@ app.use('/api/degree-batches', degreeBatchRoutes);
 app.use('/api/lecture-schedules', lectureScheduleRoutes);
 app.use('/api/lecture-modules',lectureModuleRoutes)
 app.use('/api/degrees',degreeRoutes)
+app.use('/api', assignmentRoutes);
+app.use('/api/assignment',assignmentRoutes);
 app.use(errorMiddleware);
 
 app.listen(3000, () => {
