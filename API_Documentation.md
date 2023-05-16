@@ -37,7 +37,7 @@ Body:
 ## Fetch Result  
 Endpoint: `/student/fetchResult`    
 Method: `GET`    
-Headers: Authorization: Bearer <token>    
+Headers: Authorization: Bearer ``<token>``    
     
 ## Lecturer
     
@@ -76,7 +76,7 @@ Body:
 ## Add Result    
 Endpoint: `/lecturer/AddResult`      
 Method: `POST`        
-Headers: Authorization: Bearer <token>      
+Headers: Authorization: Bearer ``<token>``      
 Body:    
 ```json
     {
@@ -201,6 +201,6 @@ Body:
 ## Get
 Endpoint: `/assignment/student`  
 Method: `GET`  
-Headers: Authorization: Bearer <token>  
+Headers: Authorization: Bearer ``<token>``  
     
 ## Please replace <token> with the actual token received after successful login and <file_path> with the actual file path for the assignment file.
