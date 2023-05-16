@@ -114,79 +114,80 @@ Endpoint: `/lecture-schedules`
 Method: `GET`  
     
     
-## Get by User
-Endpoint: `/lecture-schedules/filter`  
-Method: `GET`
-Headers: Authorization: Bearer <token>  Get by User
+## Get by User  
+Endpoint: `/lecture-schedules/filter`    
+Method: `GET`  
+Headers: Authorization: Bearer <token>  Get by User  
 
     
-## Faculty
-Create
-Endpoint: `/faculties`
-Method: `POST`
-Body:    
+## Faculty 
+    
+## Create    
+Endpoint: `/faculties`  
+Method: `POST`  
+Body:      
 ```json
 {
   "name": "Faculty of Science"
 }
 ```
-## Get
-Endpoint: `/faculties`
-Method: `GET`   
+## Get  
+Endpoint: `/faculties`  
+Method: `GET`     
     
-## Degree Batch
+## Degree Batch  
     
-## Create
-Endpoint: `/degree-batches`  
-Method: `POST`
-Body:  
+## Create  
+Endpoint: `/degree-batches`    
+Method: `POST  `
+Body:    
 ```json
 {
   "name": "20.1"
 }
 ```
-## Get
-Endpoint: `/degree-batches`  
-Method: `GET`
+## Get  
+Endpoint: `/degree-batches`    
+Method: `GET`  
     
-## Degree
+## Degree  
       
-## Create
-Endpoint: `/degrees`  
-Method: `POST`  
-Body:  
+## Create  
+Endpoint: `/degrees`    
+Method: `POST`    
+Body:    
 ```json
 {
   "name": "BSc in Computer Science"
 }
 ```
    
-## Get
-Endpoint: `/degrees`  
-Method: `GET`  
+## Get  
+Endpoint: `/degrees`    
+Method: `GET`    
     
-## Lecture Modules
+## Lecture Modules  
     
-## Create
-Endpoint: `/lecture-modules`  
-Method: `POST`  
-Body:   
+## Create  
+Endpoint: `/lecture-modules`    
+Method: `POST`    
+Body:     
 ```json
 {
   "name": "Module 13"
 }
 ```
-## Get
-Endpoint: `/lecture-modules`
-Method: `GET`
+## Get  
+Endpoint: `/lecture-modules`  
+Method: `GET`  
     
     
-## Assignment
+## Assignment  
     
-##Create
-Endpoint: `/assignment`  
-Method: `POST`  
-Body:  
+##Create  
+Endpoint: `/assignment`    
+Method: `POST`    
+Body:    
 ```json
 {
   "title": "Assignment 1",
@@ -198,9 +199,9 @@ Body:
 }
 ```
     
-## Get
-Endpoint: `/assignment/student`  
-Method: `GET`  
-Headers: Authorization: Bearer ``<token>``  
+## Get  
+Endpoint: `/assignment/student`    
+Method: `GET`     
+Headers: Authorization: Bearer ``<token>``    
     
-## Please replace <token> with the actual token received after successful login and <file_path> with the actual file path for the assignment file.
+## Please replace <token> with the actual token received after successful login and <file_path> with the actual file path for the assignment file.  
