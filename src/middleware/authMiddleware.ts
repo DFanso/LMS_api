@@ -26,8 +26,8 @@ export const authMiddleware = (req: RequestWithUser, res: Response, next: NextFu
 
     const userId = (decoded as JwtPayload).id;
 
-    req.body.userId = { id: userId };
-    console.log(req.body.userId.id)
+    req.body.userId = userId;
+    console.log(req.body.userId)
     next();
   });
 };

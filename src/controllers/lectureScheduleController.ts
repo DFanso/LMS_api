@@ -88,7 +88,7 @@ export const getAllLectureSchedules = async (req: Request, res: Response, next: 
 
 export const getFilteredLectureSchedules = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const userId = req.body.userId.id;
+    const userId = req.body.userId;
 
     // Find the student by user ID
     const student = await Student.findById(userId);
@@ -102,7 +102,7 @@ export const getFilteredLectureSchedules = async (req: Request, res: Response, n
     const degreeBatch = await DegreeBatch.findOne({ name: student.batch });
     const faculty = await Faculty.findOne({ name: student.faculty });
     const degree = await Degree.findOne({ name: student.degree });
-    
+
 console.log(degree,degreeBatch,faculty)
     // Find lecture schedules matching the degree batch and faculty
     const lectureSchedules = await LectureSchedule.find({
