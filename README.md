@@ -23,7 +23,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-git clone [https://link-to-project](https://github.com/DFanso/LMS_api)
+git clone https://github.com/DFanso/LMS_api
 ```
 Go to the project directory
 
