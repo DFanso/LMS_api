@@ -109,9 +109,9 @@ Body:
 }
 ```
     
-## Get
-Endpoint: `/lecture-schedules`
-Method: `GET`
+## Get  
+Endpoint: `/lecture-schedules`  
+Method: `GET`  
     
     
 ## Get by User
