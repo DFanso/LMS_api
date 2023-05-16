@@ -26,7 +26,7 @@ Body:
   
 ## Login  
 Endpoint: `/student/login` 
-Method: `POST`  
+Method: `POST`    
 Body:  
 ```json
 {
@@ -43,7 +43,7 @@ Headers: Authorization: Bearer <token>
     
 ## Register  
 Endpoint: `/lecturer/register`  
-Method: `POST`  
+Method: `POST`    
 Body:  
 ```json
     {
@@ -64,7 +64,7 @@ Body:
     
 ## Login
 Endpoint: `/lecturer/login`  
-Method: `POST`  
+Method: `POST`    
 Body:  
 ```json
     {
@@ -74,8 +74,8 @@ Body:
 ```
 
 ## Add Result    
-Endpoint: `/lecturer/AddResult`    
-Method: `POST`      
+Endpoint: `/lecturer/AddResult`      
+Method: `POST`        
 Headers: Authorization: Bearer <token>      
 Body:    
 ```json
