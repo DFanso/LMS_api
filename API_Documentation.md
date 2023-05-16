@@ -115,8 +115,8 @@ Method: `GET`
     
     
 ## Get by User
-Endpoint: `/lecture-schedules/filter`
-Method: `GE`T
+Endpoint: `/lecture-schedules/filter`  
+Method: `GET`
 Headers: Authorization: Bearer <token>  Get by User
 
     
