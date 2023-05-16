@@ -42,7 +42,7 @@ nodemon
 ```
 
 ## [API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)  
-### Public api hosted on ```http://175.41.169.20```
+### Public api hosted on ```http://175.41.169.20:3001/api```
 
 
 
