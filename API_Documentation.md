@@ -73,12 +73,12 @@ Body:
 }
 ```
 
-## Add Result  
-Endpoint: `/lecturer/AddResult`  
-Method: `POST`    
-Headers: Authorization: Bearer <token>    
-Body:  
-    ```json
+## Add Result    
+Endpoint: `/lecturer/AddResult`    
+Method: `POST`      
+Headers: Authorization: Bearer <token>      
+Body:    
+```json
     {
     "studentId": "64635195a764bd468d9a2d12",
     "BatchID": "test",
@@ -87,7 +87,7 @@ Body:
     "Type": "presentation",
     "Marks": "100"
 }
- ```
+```
     
 ## Lecture Schedules
     
@@ -95,7 +95,7 @@ Body:
 Endpoint: `/lecture-schedules`  
 Method: `POST`  
 Body:
-    ```json
+```json
  {
   "facultyName": "Faculty of Science",
   "degreeBatchName": "20.1",
@@ -107,7 +107,7 @@ Body:
   "lectureModules": "Module 13",
   "degreeName": "Bachelor of Science"
 }
- ```
+```
     
 ## Get
 Endpoint: `/lecture-schedules`
@@ -144,7 +144,7 @@ Body:
 {
   "name": "20.1"
 }
- ```
+```
 ## Get
 Endpoint: `/degree-batches`  
 Method: `GET`
@@ -155,11 +155,11 @@ Method: `GET`
 Endpoint: `/degrees`  
 Method: `POST`  
 Body:  
-    ```json
+```json
 {
   "name": "BSc in Computer Science"
 }
- ```
+```
    
 ## Get
 Endpoint: `/degrees`  
@@ -171,12 +171,11 @@ Method: `GET`
 Endpoint: `/lecture-modules`  
 Method: `POST`  
 Body:   
-    ```json
+```json
 {
   "name": "Module 13"
 }
-
-    ```
+```
 ## Get
 Endpoint: `/lecture-modules`
 Method: `GET`
@@ -188,7 +187,7 @@ Method: `GET`
 Endpoint: `/assignment`  
 Method: `POST`  
 Body:  
-    ```json
+```json
 {
   "title": "Assignment 1",
   "batch": "20.1",
@@ -197,7 +196,7 @@ Body:
   "category": "assignment",
   "file": "<file_path>"
 }
- ```
+```
     
 ## Get
 Endpoint: `/assignment/student`  
