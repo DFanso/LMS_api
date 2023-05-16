@@ -1,7 +1,7 @@
-### LMS API Documentation
+## LMS API Documentation
 This API documentation provides the details of the Learning Management System (LMS) API. The base URL for all the endpoints is `http://localhost:3000/api`.
 
-### Student
+## Student
 
 ## Register
 Endpoint: `/student/register`   
