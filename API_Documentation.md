@@ -25,8 +25,8 @@ Body:
 ```  
   
 ## Login  
-Endpoint: `/student/login` 
-Method: `POST`    
+Endpoint: `/student/login`   
+Method: `POST`      
 Body:  
 ```json
 {
