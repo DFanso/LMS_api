@@ -7,7 +7,7 @@ This API documentation provides the details of the Learning Management System (L
 Endpoint: /student/register   
 Method: POST  
 Body:  
-``
+``json
 {
     "studentId": "S001",
     "username": "john_doe",
@@ -28,7 +28,7 @@ Body:
 Endpoint: /student/login  
 Method: POST  
 Body:  
-``
+``json
 {
     "username": "john_doe",
     "password": "password123"
