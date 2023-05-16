@@ -4,8 +4,8 @@ This API documentation provides the details of the Learning Management System (L
 ## Student
 
 ## Register
-Endpoint: /student/register
-Method: POST
+Endpoint: /student/register /n
+Method: POST /n
 Body:
 ``
 {
