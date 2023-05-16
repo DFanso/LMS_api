@@ -73,11 +73,11 @@ Body:
 }
 ```
 
-## Add Result
-Endpoint: `/lecturer/AddResult`
-Method: `POST`  
-Headers: Authorization: Bearer <token>  
-Body:
+## Add Result  
+Endpoint: `/lecturer/AddResult`  
+Method: `POST`    
+Headers: Authorization: Bearer <token>    
+Body:  
     ```json
     {
     "studentId": "64635195a764bd468d9a2d12",
@@ -89,7 +89,7 @@ Body:
 }
  ```
     
- ## Lecture Schedules
+## Lecture Schedules
     
 ## Create
 Endpoint: `/lecture-schedules`  
