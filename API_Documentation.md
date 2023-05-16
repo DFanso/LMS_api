@@ -4,8 +4,8 @@ This API documentation provides the details of the Learning Management System (L
 ## Student
 
 ## Register
-Endpoint: /student/register /n
-Method: POST /n
+Endpoint: /student/register   
+Method: POST  
 Body:
 ``
 {
@@ -22,4 +22,4 @@ Body:
     "degree": "BSc in Computer Science",
     "batch": "2020"
 }
-``
+``  
