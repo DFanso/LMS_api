@@ -6,7 +6,7 @@ This API documentation provides the details of the Learning Management System (L
 ## Register
 Endpoint: /student/register   
 Method: POST  
-Body:
+Body:  
 ``
 {
     "studentId": "S001",
@@ -23,3 +23,14 @@ Body:
     "batch": "2020"
 }
 ``  
+  
+## Login  
+Endpoint: /student/login  
+Method: POST  
+Body:  
+``
+{
+    "username": "john_doe",
+    "password": "password123"
+}
+``
