@@ -138,9 +138,9 @@ Method: `GET`
 ## Degree Batch  
     
 ## Create  
-Endpoint: `/degree-batches`    
-Method: `POST  `
-Body:    
+Endpoint: `/degree-batches`      
+Method: `POST`  
+Body:      
 ```json
 {
   "name": "20.1"
