@@ -11,7 +11,7 @@ export const authMiddleware = (req: RequestWithUser, res: Response, next: NextFu
   const token = authHeader && authHeader.split(' ')[1];
 
   if (!token) {
-    const error = new Error('No token provided');
+    const error = new Error('No token provided') as any;
     error.status = 401;
     return next(error);
   }
@@ -19,7 +19,7 @@ export const authMiddleware = (req: RequestWithUser, res: Response, next: NextFu
   // Verify the token
   jwt.verify(token, process.env.SECRET_KEY as string, (err, user) => {
     if (err) {
-      const error = new Error('Invalid token');
+      const error = new Error('Invalid token') as any;
       error.status = 403;
       return next(error);
     }
