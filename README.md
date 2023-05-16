@@ -23,7 +23,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-git clone [https://link-to-project](https://github.com/DFanso/LMS_api)
+git clone https://github.com/DFanso/LMS_api
 ```
 Go to the project directory
 
@@ -40,7 +40,9 @@ Start the server
 ```bash
 nodemon
 ```
-## [API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)
+
+## [API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)  
+### Public api hosted on ```http://175.41.169.20:3001/api```
 
 
 
