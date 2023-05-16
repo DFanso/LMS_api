@@ -34,10 +34,10 @@ Body:
     "password": "password123"
 }
 ```
-## Fetch Result
-Endpoint: `/student/fetchResult`  
-Method: GET  
-Headers: Authorization: Bearer <token>  
+## Fetch Result  
+Endpoint: `/student/fetchResult`    
+Method: `GET`    
+Headers: Authorization: Bearer <token>    
     
 ## Lecturer
     
