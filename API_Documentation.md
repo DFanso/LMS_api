@@ -1,10 +1,10 @@
 ### LMS API Documentation
-This API documentation provides the details of the Learning Management System (LMS) API. The base URL for all the endpoints is http://localhost:3000/api.
+This API documentation provides the details of the Learning Management System (LMS) API. The base URL for all the endpoints is `http://localhost:3000/api`.
 
 ## Student
 
 ## Register
-Endpoint: /student/register   
+Endpoint: `/student/register`   
 Method: POST  
 Body:  
 ```json
@@ -25,7 +25,7 @@ Body:
 ```  
   
 ## Login  
-Endpoint: /student/login  
+Endpoint: `/student/login` 
 Method: POST  
 Body:  
 ```json
@@ -34,3 +34,30 @@ Body:
     "password": "password123"
 }
 ```
+## Fetch Result
+Endpoint: `/student/fetchResult`  
+Method: GET  
+Headers: Authorization: Bearer <token>  
+    
+## Lecturer
+Register  
+Endpoint: `/lecturer/register`  
+Method:`POST`  
+Body:  
+```json
+    {
+    "staffId": "123456",
+    "name": "John Doe",
+    "username": "johndoe",
+    "password": "password",
+    "email": "johndoe@example.com",
+    "phone": "1234567890",
+    "address": "123 Main St, City, Country",
+    "dob": "1980-01-01",
+    "faculty": "Faculty of Science",
+    "role": "Lecturer",
+    "nic": "123456789V"
+}
+
+```
+
