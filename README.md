@@ -40,9 +40,9 @@ Start the server
 ```bash
 nodemon
 ```
-## API Reference
+## [API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)
 
-[API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)
+
 
 
 
