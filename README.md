@@ -40,6 +40,7 @@ Start the server
 ```bash
 nodemon
 ```
+## Public api hosted on ```http://175.41.169.20```
 ## [API Documentation](https://github.com/DFanso/LMS_api/blob/main/API_Documentation.md)
 
 
