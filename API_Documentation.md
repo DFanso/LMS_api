@@ -116,10 +116,15 @@ Endpoint: `/lecture-schedules`
 Method: `GET`  
     
     
-## Get by User  
+## Get by Student  
 Endpoint: `/lecture-schedules/filter`    
 Method: `GET`  
 Headers: Authorization: Bearer ``<token>`` 
+
+## Get by Lecturer  
+Endpoint: `/lecture-schedules/filterByLecturer`    
+Method: `GET`  
+Headers: Authorization: Bearer ``<token>``
 
     
 ## Faculty 
@@ -203,7 +208,13 @@ Body:
     
 ## Get  
 Endpoint: `/assignment/student`    
-Method: `GET`     
+Method: `GET`
+Body:  
+```json
+{
+    "moduleName":"Module 1"
+}
+```
 Headers: Authorization: Bearer ``<token>``    
     
 ## Please replace <token> with the actual token received after successful login and <file_path> with the actual file path for the assignment file.  
