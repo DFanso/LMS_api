@@ -127,3 +127,38 @@ const lectureSchedules = await LectureSchedule.find({
     next(err);
   }
 };
+
+export const getFilteredLectureSchedulesByLecturer = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const userId = req.body.userId;
+
+    // Find the lecturer by user ID
+    const lecturer = await Lecturer.findById(userId);
+    if (!lecturer) {
+      const error: any = new Error('Lecturer not found');
+      error.status = 400;
+      return next(error);
+    }
+
+    // Get today's date at the start of the day
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Get tomorrow's date at the start of the day
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    // Find lecture schedules matching the lecturer's ID and today's date
+    const lectureSchedules = await LectureSchedule.find({
+      lecturer: lecturer.name,
+      date: {
+        $gte: today,
+        $lt: tomorrow
+      }
+    });
+
+    res.json(lectureSchedules);
+  } catch (err) {
+    next(err);
+  }
+};
