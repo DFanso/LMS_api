@@ -3,9 +3,9 @@ import LectureModule from '../models/lectureModule';
 
 export const createLectureModule = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { name } = req.body;
+    const { name, batch } = req.body; // Add batch here
 
-    const lectureModule = new LectureModule({ name });
+    const lectureModule = new LectureModule({ name, batch }); // And here
 
     await lectureModule.save();
 
@@ -15,12 +15,21 @@ export const createLectureModule = async (req: Request, res: Response, next: Nex
   }
 };
 
+
 export const getAllLectureModules = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const lectureModules = await LectureModule.find();
-  
-      res.json(lectureModules);
-    } catch (err) {
-      next(err);
+  try {
+    const { batch } = req.body; // Get batch from request body
+
+    let query = {};
+
+    if (batch) {
+      query = { batch }; // If batch is provided, add it to the query
     }
-  };
+
+    const lectureModules = await LectureModule.find(query);
+  
+    res.json(lectureModules);
+  } catch (err) {
+    next(err);
+  }
+};
