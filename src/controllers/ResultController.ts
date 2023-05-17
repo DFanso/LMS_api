@@ -5,15 +5,7 @@ import Student from "../models/Student";
 
 // Create a new Result
 export const addResult = async (req: Request, res: Response) => {
-  const {
-    studentId,
-    BatchName,
-    FacultyName,
-    DegreeName,
-    ModuleName,
-    Type,
-    Marks,
-  } = req.body;
+  const { studentId, ModuleName, Type, Marks } = req.body;
 
   try {
     const studentDetails = await Student.findOne({ studentId });
@@ -26,10 +18,10 @@ export const addResult = async (req: Request, res: Response) => {
 
     const newResult = new Result({
       StudentId: studentObjID,
-      BatchName,
-      FacultyName,
-      DegreeName,
-      ModuleName,
+      BatchName: studentDetails.batch,
+      FacultyName: studentDetails.faculty,
+      DegreeName: studentDetails.degree,
+      ModuleName: ModuleName,
       Type,
       Marks,
     });
