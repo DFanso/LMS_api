@@ -103,13 +103,24 @@ export const getFilteredLectureSchedules = async (req: Request, res: Response, n
     const faculty = await Faculty.findOne({ name: student.faculty });
     const degree = await Degree.findOne({ name: student.degree });
 
-console.log(degree,degreeBatch,faculty)
-    // Find lecture schedules matching the degree batch and faculty
-    const lectureSchedules = await LectureSchedule.find({
-      degreeBatch: degreeBatch?.name,
-      faculty: faculty?.name,
-      degree: degree?.name
-    });
+// Get today's date at the start of the day
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+// Get tomorrow's date at the start of the day
+const tomorrow = new Date(today);
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+// Find lecture schedules matching the degree batch, faculty, and today's date
+const lectureSchedules = await LectureSchedule.find({
+  degreeBatch: degreeBatch?.name,
+  faculty: faculty?.name,
+  degree: degree?.name,
+  date: {
+    $gte: today,
+    $lt: tomorrow
+  }
+});
 
     res.json(lectureSchedules);
   } catch (err) {
