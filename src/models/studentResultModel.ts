@@ -10,10 +10,11 @@ export interface IResult extends Document {
 }
 
 const ResultSchema: Schema = new mongoose.Schema({
-  studentId: { type: String, required: true },
-  BatchID: { type: String, required: true },
-  FacultyId: { type: String, required: true },
-  DegreeID: { type: String, required: true },
+  StudentId: { type: String, required: true },
+  BatchName: { type: String, required: true },
+  FacultyName: { type: String, required: true },
+  DegreeName: { type: String, required: true },
+  ModuleName: { type: String, required: true },
   Type: { type: String, required: true },
   Marks: { type: String, required: true },
 });
