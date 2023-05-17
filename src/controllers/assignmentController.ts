@@ -64,11 +64,15 @@ export const getAssignmentsForStudent = async (req: Request, res: Response) => {
       return res.status(404).json({ message: "Student not found" });
     }
 
-    // Find assignments that match the student's degree and batch
-    const assignments = await Assignment.find({
-      degree: student.degree,
-      batch: student.batch
-    });
+    // Get the module name from the request
+const moduleName = req.body.moduleName;
+
+// Find assignments that match the student's degree, batch, and the module name
+const assignments = await Assignment.find({
+  degree: student.degree,
+  batch: student.batch,
+  moduleName: moduleName
+});
 
     // Return the assignments
     res.json(assignments);
