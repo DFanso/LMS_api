@@ -1,10 +1,12 @@
 import express from 'express';
-import { createLectureModule,getAllLectureModules } from '../controllers/lectureModuleController';
+import { createLectureModule,getAllLectureModules,getAllLectureModulesForStudent } from '../controllers/lectureModuleController';
+import { authMiddleware } from '../middleware/authMiddleware';
 
 const router = express.Router();
 
 // Create Lecture Module
 router.post('/', createLectureModule);
-router.get('/', getAllLectureModules);
+router.get('/student',authMiddleware, getAllLectureModulesForStudent);
+router.get("/",getAllLectureModules)
 
 export default router;
