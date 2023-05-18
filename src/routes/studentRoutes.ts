@@ -8,4 +8,9 @@ const router = express.Router();
 router.post("/register", studentController.register);
 router.post("/login", studentController.login);
 router.get("/fetchResult", authMiddleware, fetchResult);
+router.get(
+  "/getStudentDetailsById",
+  authMiddleware,
+  studentController.getStudentDetailsById
+);
 export default router;
