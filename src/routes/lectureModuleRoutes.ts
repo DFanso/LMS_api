@@ -4,6 +4,7 @@ import {
   getAllLectureModules,
   getAllLectureModulesForStudent,
   getAllLectureModulesFromStudentID,
+  getAllLectureModulesNoFilter,
 } from "../controllers/lectureModuleController";
 import { authMiddleware } from "../middleware/authMiddleware";
 
@@ -17,5 +18,10 @@ router.get(
   "/getAllLectureModulesFromStudentID",
   authMiddleware,
   getAllLectureModulesFromStudentID
+);
+router.get(
+  "/getAllLectureModulesNoFilter",
+  authMiddleware,
+  getAllLectureModulesNoFilter
 );
 export default router;
