@@ -80,3 +80,19 @@ export const login = async (
     next(err);
   }
 };
+export const getLecturerDetailsById = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  try {
+    const tempID = req.body.userId;
+    const lecturer = await Lecturer.findById(tempID);
+    if (lecturer) {
+      res.status(200).json(lecturer);
+    } else {
+      res.status(404).json({ message: "Lecturer not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error });
+  }
+};
