@@ -7,5 +7,5 @@ const router = express.Router();
 const upload = multer();
 
 router.post("/", upload.single('file'), createAssignment);
-router.get("/student",authMiddleware, getAssignmentsForStudent);
+router.post("/student",authMiddleware, getAssignmentsForStudent);
 export default router;

@@ -66,6 +66,7 @@ export const getAssignmentsForStudent = async (req: Request, res: Response) => {
 
     // Get the module name from the request
 const moduleName = req.body.moduleName;
+console.log(moduleName)
 
 // Find assignments that match the student's degree, batch, and the module name
 const assignments = await Assignment.find({
